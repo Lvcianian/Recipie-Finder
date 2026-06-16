@@ -1,0 +1,35 @@
+/* ===== custom properties ===== */
+:root {
+  /* colour palette and spacing variables */
+}
+
+/* ===== reset ===== */
+
+/* ===== header ===== */
+
+/* ===== nav — use Flexbox here ===== */
+
+/* ===== login page ===== */
+
+/* ===== main ===== */
+
+/* ===== form ===== */
+
+/* ===== results grid — use CSS Grid here ===== */
+
+/* ===== card ===== */
+
+/* ===== saved grid — use CSS Grid here ===== */
+
+/* ===== loading & error states ===== */
+
+/* ===== footer ===== */
+
+/* ===== responsive ===== */
+@media (max-width: 600px) {
+  /* mobile */
+}
+
+@media (min-width: 1024px) {
+  /* desktop */
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Name</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <span class="nav__logo">Project Name</span>
+      <div class="nav__links">
+        <a href="index.html">Search</a>
+        <a href="saved.html">Saved</a>
+      </div>
+      <div class="nav__actions">
+        <span id="nav-user"></span>
+        <button id="logout-btn" type="button">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- search / filter form -->
+    <section>
+      <form id="search-form">
+        <!-- add your inputs here (at least 3 different types) -->
+        <button type="submit">Search</button>
+      </form>
+    </section>
+
+    <!-- loading and error states -->
+    <p id="loading-msg" hidden>Loading…</p>
+    <p id="error-msg" hidden></p>
+
+    <!-- dynamically generated cards land here -->
+    <section>
+      <div id="results-grid"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <!-- footer content -->
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>
