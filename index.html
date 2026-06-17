@@ -1,52 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project Name</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder - Discover Delicious Meals</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="nav-brand">
+                <span class="brand-icon">🍳</span>
+                <span class="brand-name">RecipeFinder</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="saved.html">Saved Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <header>
-    <nav>
-      <span class="nav__logo">Project Name</span>
-      <div class="nav__links">
-        <a href="index.html">Search</a>
-        <a href="saved.html">Saved</a>
-      </div>
-      <div class="nav__actions">
-        <span id="nav-user"></span>
-        <button id="logout-btn" type="button">Logout</button>
-      </div>
-    </nav>
-  </header>
+    <main>
+        <section class="hero">
+            <h1>Discover Your Next Favorite Meal</h1>
+            <p>Search thousands of recipes from around the world!</p>
+        </section>
 
-  <main>
+        <section class="search-section">
+            <form id="search-form" class="search-form">
+                <div class="form-group">
+                    <label for="search-input">Search for a recipe</label>
+                    <input 
+                        type="text" 
+                        id="search-input" 
+                        placeholder="e.g., Chicken, Pasta, Cake..." 
+                        required
+                        minlength="2"
+                        maxlength="50"
+                        autocomplete="off"
+                    >
+                    <div class="search-hint">Enter at least 2 characters</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="category-select">Filter by Category</label>
+                    <select id="category-select">
+                        <option value="">All Categories</option>
+                        <option value="Beef">Beef</option>
+                        <option value="Chicken">Chicken</option>
+                        <option value="Dessert">Dessert</option>
+                        <option value="Lamb">Lamb</option>
+                        <option value="Pasta">Pasta</option>
+                        <option value="Seafood">Seafood</option>
+                        <option value="Vegetarian">Vegetarian</option>
+                    </select>
+                </div>
 
-    <!-- search / filter form -->
-    <section>
-      <form id="search-form">
-        <!-- add your inputs here (at least 3 different types) -->
-        <button type="submit">Search</button>
-      </form>
-    </section>
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="show-saved-only">
+                        Show only saved recipes
+                    </label>
+                </div>
 
-    <!-- loading and error states -->
-    <p id="loading-msg" hidden>Loading…</p>
-    <p id="error-msg" hidden></p>
+                <button type="submit" class="btn btn-primary">Search Recipes</button>
+            </form>
+        </section>
 
-    <!-- dynamically generated cards land here -->
-    <section>
-      <div id="results-grid"></div>
-    </section>
+        <section id="results-section" class="results-section">
+            <div id="loading-indicator" class="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Searching for delicious recipes...</p>
+            </div>
+            <div id="error-message" class="error" style="display: none;"></div>
+            <div id="results-grid" class="recipe-grid"></div>
+        </section>
+    </main>
 
-  </main>
+    <footer>
+        <p>&copy; 2026 RecipeFinder. All recipes provided by TheMealDB API.</p>
+    </footer>
 
-  <footer>
-    <!-- footer content -->
-  </footer>
-
-  <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>

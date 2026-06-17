@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Recipe Finder</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-brand">
+                <span class="brand-icon">🍳</span>
+                <span class="brand-name">RecipeFinder</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="saved.html">Saved Recipes</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="about-content">
+            <h1>About RecipeFinder</h1>
+            
+            <section>
+                <h2>What We Do</h2>
+                <p>RecipeFinder is a web application that helps you discover new recipes from around the world. Powered by TheMealDB API, we provide access to thousands of recipes across various cuisines and categories.</p>
+            </section>
+
+            <section>
+                <h2>Features</h2>
+                <ul>
+                    <li>Search for recipes by name or ingredient</li>
+                    <li>Filter by category</li>
+                    <li>Save your favorite recipes</li>
+                    <li>View detailed recipe information</li>
+                    <li>Your saved recipes persist across sessions</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Technologies Used</h2>
+                <ul>
+                    <li>HTML5 with semantic elements</li>
+                    <li>CSS3 with Flexbox and Grid layouts</li>
+                    <li>JavaScript ES6+ modules</li>
+                    <li>LocalStorage for data persistence</li>
+                    <li>RESTful API integration</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Contact</h2>
+                <p>Have questions or suggestions? We'd love to hear from you!</p>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="contact-name">Your Name</label>
+                        <input type="text" id="contact-name" placeholder="John Doe" required minlength="2">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-email">Your Email</label>
+                        <input type="email" id="contact-email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea id="contact-message" placeholder="Tell us what you think..." required minlength="10" maxlength="500"></textarea>
+                    </div>
+                    <div class="form-group rating-group">
+                        <label>Rate RecipeFinder</label>
+                        <div class="rating-options">
+                            <label><input type="radio" name="rating" value="1"> ★</label>
+                            <label><input type="radio" name="rating" value="2"> ★★</label>
+                            <label><input type="radio" name="rating" value="3"> ★★★</label>
+                            <label><input type="radio" name="rating" value="4"> ★★★★</label>
+                            <label><input type="radio" name="rating" value="5" checked> ★★★★★</label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Feedback</button>
+                </form>
+                <div id="contact-feedback" class="feedback"></div>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 RecipeFinder. All recipes provided by TheMealDB API.</p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

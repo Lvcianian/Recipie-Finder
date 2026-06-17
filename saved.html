@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Saved — Project Name</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saved Recipes - Recipe Finder</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header>
+        <nav>
+            <div class="nav-brand">
+                <span class="brand-icon">🍳</span>
+                <span class="brand-name">RecipeFinder</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="saved.html" class="active">Saved Recipes</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <header>
-    <nav>
-      <span class="nav__logo">Project Name</span>
-      <div class="nav__links">
-        <a href="index.html">Search</a>
-        <a href="saved.html">Saved</a>
-      </div>
-      <div class="nav__actions">
-        <span id="nav-user"></span>
-        <button id="logout-btn" type="button">Logout</button>
-      </div>
-    </nav>
-  </header>
+    <main>
+        <section class="saved-hero">
+            <h1>Your Saved Recipes</h1>
+            <p id="saved-count">You have 0 saved recipes</p>
+            <button id="clear-all-btn" class="btn btn-danger">Clear All</button>
+        </section>
 
-  <main>
+        <section id="saved-section">
+            <div id="saved-grid" class="recipe-grid"></div>
+            <div id="empty-saved" class="empty-state">
+                <p>No saved recipes yet.</p>
+                <p><a href="index.html">Search for recipes</a> and save your favorites!</p>
+            </div>
+        </section>
+    </main>
 
-    <section>
-      <h2>Saved Items</h2>
-      <p id="saved-empty" hidden>Nothing saved yet.</p>
-      <div id="saved-grid"></div>
-    </section>
+    <footer>
+        <p>&copy; 2026 RecipeFinder. All recipes provided by TheMealDB API.</p>
+    </footer>
 
-  </main>
-
-  <footer>
-    <!-- footer content -->
-  </footer>
-
-  <script type="module" src="js/saved.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
 </html>
